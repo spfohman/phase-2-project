@@ -1,0 +1,36 @@
+{
+  "blogposts": [
+    {
+      "title": "Using React State with Functional Components",
+      "link": "https://medium.com/@spfohman_90079/using-react-state-with-functional-components-f5e22ebca411",
+      "date": "November 29, 2021"
+    },
+    {
+      "title": "JavaScript Application",
+      "link": "https://medium.com/@spfohman_90079/javascript-application-ba3d17c7420e",
+      "date": "October 27, 2021"
+    },
+    {
+      "title": "JavaScript Array Methods for All",
+      "link": "https://medium.com/@spfohman_90079/javascript-array-methods-for-all-378cde1aa849",
+      "date": "October 19, 2021"
+    },
+    {
+      "title": "Once Upon a Time... Cheers to new beginnings",
+      "link": "https://medium.com/@spfohman_90079/once-upon-a-time-cheers-to-new-beginnings-142332904741",
+      "date": "October 14, 2021"
+    }
+  ],
+  "gitprojects": [
+    {
+      "title": "",
+      "link": "url",
+      "date": "date"
+    },
+    {
+      "title": "",
+      "link": "url",
+      "date": "date"
+    }
+  ]
+}
