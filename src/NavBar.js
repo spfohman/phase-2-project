@@ -3,15 +3,15 @@ import { NavLink } from "react-router-dom";
 
 function NavBar() {
   return (
-    <div className="navbar">
-      <NavLink to="/" exact>
-        <button>Home</button>
+    <div className="">
+      <NavLink to="/">
+        <button className="button">Home</button>
       </NavLink>
       <NavLink to="/blogposts">
-        <button>Blog Posts</button>
+        <button className="button">Blog Posts</button>
       </NavLink>
       <NavLink to="/gitprojects">
-        <button>Git Projects</button>
+        <button className="button">Git Projects</button>
       </NavLink>
     </div>
   );
