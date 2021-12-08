@@ -13,10 +13,6 @@ body {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
 .image {
   border-radius: 25px;
   width: 40%;
@@ -30,10 +26,17 @@ body {
   color: darkslateblue;
 }
 .blogCard {
+  border-radius: 20px;
   max-width: 60%;
   height: 300px;
   text-align: center;
   margin: auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   background-color: gray;
+}
+.form {
+  margin-bottom: 40px;
+}
+.bloglinks {
+  color: darkgreen;
 }

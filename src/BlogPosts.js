@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import EachBlog from "./EachBlog";
 import AddNewBlog from "./AddNewBlog";
 
-const BlogPosts = () => {
-  const [blogs, setBlogs] = useState([]);
+const BlogPosts = ({ blogs }) => {
   const [likes, setLikes] = useState(0);
 
   function updateLikes() {
@@ -21,14 +20,6 @@ const BlogPosts = () => {
       .then((response) => response.json())
       .then(setLikes);
   }
-
-  useEffect(() => {
-    fetch("http://localhost:3001/blogposts")
-      .then((response) => response.json())
-      .then((data) => {
-        setBlogs(data);
-      });
-  }, []);
 
   const blogPosts = blogs.map((post) => (
     <EachBlog key={post.title} post={post} updateLikes={updateLikes} />

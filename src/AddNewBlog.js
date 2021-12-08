@@ -3,7 +3,7 @@ import React from "react";
 const AddNewBlog = () => {
   return (
     <div>
-      <form>
+      <form className="form">
         <h5>Upload a new blog post here: </h5>
         <input type="text" placeholder="Title"></input>
         <br />

@@ -5,7 +5,9 @@ const EachBlog = ({ post, updateLikes }) => {
     <div className="blogCard">
       <h3>{post.title}</h3>
       <h5>Posted: {post.date}</h5>
-      <a href={post.link}>{post.title}</a>
+      <a className="bloglinks" href={post.link}>
+        {post.title}
+      </a>
       <br />
       <button onClick={updateLikes}>Likes: {post.likes}</button>
     </div>
