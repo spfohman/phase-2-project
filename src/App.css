@@ -29,3 +29,11 @@ body {
   border-radius: 5px;
   color: darkslateblue;
 }
+.blogCard {
+  max-width: 60%;
+  height: 300px;
+  text-align: center;
+  margin: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: gray;
+}

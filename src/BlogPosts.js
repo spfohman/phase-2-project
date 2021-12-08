@@ -1,6 +1,50 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import EachBlog from "./EachBlog";
+import AddNewBlog from "./AddNewBlog";
 
 const BlogPosts = () => {
-  return <div>Blog Posts here</div>;
+  const [blogs, setBlogs] = useState([]);
+  const [likes, setLikes] = useState(0);
+
+  function updateLikes() {
+    const addLike = {
+      likes: likes + 1,
+    };
+
+    fetch(`http://localhost:3001/blogposts/${blogs.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(addLike),
+    })
+      .then((response) => response.json())
+      .then(setLikes);
+  }
+
+  useEffect(() => {
+    fetch("http://localhost:3001/blogposts")
+      .then((response) => response.json())
+      .then((data) => {
+        setBlogs(data);
+      });
+  }, []);
+
+  const blogPosts = blogs.map((post) => (
+    <EachBlog key={post.title} post={post} updateLikes={updateLikes} />
+  ));
+
+  return (
+    <div>
+      <h4>
+        Here is a list of my most recent blog posts. Feel free to check them
+        out, like, or leave a comment!
+      </h4>
+      {blogPosts}
+      <br />
+      <hr />
+      <AddNewBlog />
+    </div>
+  );
 };
 export default BlogPosts;
