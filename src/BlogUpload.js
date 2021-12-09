@@ -1,6 +1,6 @@
 import React from "react";
 
-const AddNewBlog = () => {
+const BlogUpload = () => {
   return (
     <div>
       <form className="form">
@@ -15,4 +15,4 @@ const AddNewBlog = () => {
     </div>
   );
 };
-export default AddNewBlog;
+export default BlogUpload;

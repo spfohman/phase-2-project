@@ -10,8 +10,8 @@ function NavBar() {
       <NavLink to="/blogposts">
         <button className="button">Blog Posts</button>
       </NavLink>
-      <NavLink to="/gitprojects">
-        <button className="button">Git Projects</button>
+      <NavLink to="/blogupload">
+        <button className="button">Blog Upload</button>
       </NavLink>
     </div>
   );

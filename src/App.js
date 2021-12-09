@@ -4,7 +4,7 @@ import { Route } from "react-router-dom";
 import NavBar from "./NavBar";
 import BlogPosts from "./BlogPosts";
 import React, { useState, useEffect } from "react";
-import GitProjects from "./GitProjects";
+import BlogUpload from "./BlogUpload";
 
 function App() {
   const [blogs, setBlogs] = useState([]);
@@ -17,6 +17,7 @@ function App() {
         setProjects(data);
       });
   }, []);
+  console.log(projects);
   return (
     <div className="App">
       <NavBar />
@@ -27,8 +28,8 @@ function App() {
       <Route path="/blogposts">
         <BlogPosts blogs={blogs} />
       </Route>
-      <Route path="/gitprojects">
-        <GitProjects projects={projects} />
+      <Route path="/blogupload">
+        <BlogUpload />
       </Route>
     </div>
   );

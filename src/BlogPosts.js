@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import EachBlog from "./EachBlog";
-import AddNewBlog from "./AddNewBlog";
 
 const BlogPosts = ({ blogs }) => {
   const [likes, setLikes] = useState(0);
@@ -34,7 +33,6 @@ const BlogPosts = ({ blogs }) => {
       {blogPosts}
       <br />
       <hr />
-      <AddNewBlog />
     </div>
   );
 };
