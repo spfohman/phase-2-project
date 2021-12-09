@@ -14,10 +14,11 @@ const BlogPosts = ({ blogs }) => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(addLike),
+      body: JSON.stringify({ addLike }),
     })
       .then((response) => response.json())
       .then(setLikes);
+    console.log(`clicked ${blogs.id}`);
   }
 
   const blogPosts = blogs.map((post) => (

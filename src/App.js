@@ -8,16 +8,15 @@ import BlogUpload from "./BlogUpload";
 
 function App() {
   const [blogs, setBlogs] = useState([]);
-  const [projects, setProjects] = useState([]);
+
   useEffect(() => {
     fetch("http://localhost:3001/blogposts")
       .then((response) => response.json())
       .then((data) => {
         setBlogs(data);
-        setProjects(data);
       });
   }, []);
-  console.log(projects);
+  console.log(blogs);
   return (
     <div className="App">
       <NavBar />
