@@ -9,24 +9,24 @@ const BlogUpload = () => {
   });
   function handleChange(e) {
     console.log(e.target.value);
-    setBlog({
-      ...blog,
-      [e.target.name]: e.target.value,
-    });
+    const name = e.target.name;
+    const value = e.target.value;
+    setBlog((values) => ({ ...values, [name]: value }));
   }
   function handleSubmit(e) {
     e.preventDefault();
-    const newBlog = {
-      title: blog.title,
-      link: blog.link,
-      date: blog.date,
-      likes: 0,
-    };
+    console.log(blog.title);
+    // const newBlog = {
+    //   title: blog.title,
+    //   link: blog.link,
+    //   date: blog.date,
+    //   likes: 0,
+    // };
     fetch("http://localhost:3001/blogposts/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        body: JSON.stringify(newBlog),
+        body: JSON.stringify({ blog }),
       },
     })
       .then((response) => response.json())
@@ -48,6 +48,7 @@ const BlogUpload = () => {
           type="text"
           placeholder="Title"
           name="title"
+          value={blog.title}
           onChange={handleChange}
         ></input>
         <br />
@@ -55,6 +56,7 @@ const BlogUpload = () => {
           type="text"
           placeholder="Date"
           name="date"
+          value={blog.date}
           onChange={handleChange}
         ></input>
         <br />
@@ -62,6 +64,7 @@ const BlogUpload = () => {
           type="url"
           placeholder="Web Link"
           name="link"
+          value={blog.link}
           onChange={handleChange}
         ></input>
         <br />

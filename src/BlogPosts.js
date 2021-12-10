@@ -28,12 +28,10 @@ const BlogPosts = ({ blogs }) => {
   return (
     <div>
       <h4>
-        Here is a list of my most recent blog posts. Feel free to check them
-        out, like, or leave a comment!
+        Here is a list of my most recent blog posts, please check them out!
       </h4>
       {blogPosts}
       <br />
-      <hr />
     </div>
   );
 };

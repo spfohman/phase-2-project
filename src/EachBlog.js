@@ -9,7 +9,9 @@ const EachBlog = ({ post, updateLikes }) => {
         {post.title}
       </a>
       <br />
-      <button onClick={updateLikes}>Likes: {post.likes}</button>
+      <button className="likeButton" onClick={updateLikes}>
+        Likes: {post.likes}
+      </button>
     </div>
   );
 };
