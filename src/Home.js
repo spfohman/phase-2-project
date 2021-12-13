@@ -11,9 +11,14 @@ const Home = () => {
   const eachCat = cat.map((cat) => {
     return <img className="image" src={cat.url} alt={cat.id} key={cat.id} />;
   });
+
   return (
     <div>
       <h1>Welcome to my home page</h1>
+      <p>
+        My name is Sarah Pfohman, I am a current student at Flatiron School,
+        based in NYC! I love cats, true crime, and learning to code!
+      </p>
       {eachCat}
     </div>
   );
