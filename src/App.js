@@ -16,7 +16,11 @@ function App() {
         setBlogs(data);
       });
   }, []);
-  console.log(blogs);
+
+  function addBlogs(newBlog) {
+    const updatedBlogs = [...blogs, newBlog];
+    setBlogs(updatedBlogs);
+  }
   return (
     <div className="App">
       <NavBar />
@@ -28,7 +32,7 @@ function App() {
         <BlogPosts blogs={blogs} />
       </Route>
       <Route path="/blogupload">
-        <BlogUpload />
+        <BlogUpload addBlogs={addBlogs} />
       </Route>
     </div>
   );

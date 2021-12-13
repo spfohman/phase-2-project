@@ -22,7 +22,7 @@ const BlogPosts = ({ blogs }) => {
   }
 
   const blogPosts = blogs.map((post) => (
-    <EachBlog key={post.title} post={post} updateLikes={updateLikes} />
+    <EachBlog key={post.id} post={post} updateLikes={updateLikes} />
   ));
 
   return (

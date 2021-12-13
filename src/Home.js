@@ -7,7 +7,7 @@ const Home = () => {
       .then((response) => response.json())
       .then((data) => setCat(data));
   }, []);
-  console.log(cat);
+
   const eachCat = cat.map((cat) => {
     return <img className="image" src={cat.url} alt={cat.id} key={cat.id} />;
   });

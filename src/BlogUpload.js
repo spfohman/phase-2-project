@@ -1,38 +1,42 @@
 import React, { useState } from "react";
 
-const BlogUpload = () => {
-  const [blog, setBlog] = useState({
+const BlogUpload = ({ addBlogs }) => {
+  const [newBlog, setNewBlog] = useState({
     title: "",
     link: "",
     date: "",
     likes: 0,
   });
-  function handleChange(e) {
-    console.log(e.target.value);
+
+  const handleChange = (e) => {
     const name = e.target.name;
     const value = e.target.value;
-    setBlog((values) => ({ ...values, [name]: value }));
-  }
+    setNewBlog({ ...newBlog, [name]: value });
+  };
+
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(blog.title);
-    // const newBlog = {
-    //   title: blog.title,
-    //   link: blog.link,
-    //   date: blog.date,
-    //   likes: 0,
-    // };
+    console.log(newBlog);
+    const addnewBlog = {
+      title: newBlog.title,
+      link: newBlog.link,
+      date: newBlog.date,
+      likes: 0,
+    };
+    console.log(addnewBlog);
     fetch("http://localhost:3001/blogposts/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        body: JSON.stringify({ blog }),
+        body: JSON.stringify(addnewBlog),
       },
     })
       .then((response) => response.json())
       .then((data) => {
-        setBlog(data);
-        setBlog({
+        console.log(data.title);
+        addBlogs(data.title);
+
+        setNewBlog({
           title: "",
           link: "",
           date: "",
@@ -48,7 +52,7 @@ const BlogUpload = () => {
           type="text"
           placeholder="Title"
           name="title"
-          value={blog.title}
+          value={newBlog.title}
           onChange={handleChange}
         ></input>
         <br />
@@ -56,7 +60,7 @@ const BlogUpload = () => {
           type="text"
           placeholder="Date"
           name="date"
-          value={blog.date}
+          value={newBlog.date}
           onChange={handleChange}
         ></input>
         <br />
@@ -64,7 +68,7 @@ const BlogUpload = () => {
           type="url"
           placeholder="Web Link"
           name="link"
-          value={blog.link}
+          value={newBlog.link}
           onChange={handleChange}
         ></input>
         <br />
