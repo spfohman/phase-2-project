@@ -4,29 +4,64 @@
       "title": "Using React State with Functional Components",
       "link": "https://medium.com/@spfohman_90079/using-react-state-with-functional-components-f5e22ebca411",
       "date": "November 29, 2021",
-      "likes": 0,
+      "likes": 6,
       "id": 1
     },
     {
       "title": "JavaScript Application",
       "link": "https://medium.com/@spfohman_90079/javascript-application-ba3d17c7420e",
       "date": "October 27, 2021",
-      "likes": 0,
+      "likes": 2,
       "id": 2
     },
     {
       "title": "JavaScript Array Methods for All",
       "link": "https://medium.com/@spfohman_90079/javascript-array-methods-for-all-378cde1aa849",
       "date": "October 19, 2021",
-      "likes": 0,
+      "likes": 2,
       "id": 3
     },
     {
       "title": "Once Upon a Time... Cheers to new beginnings",
       "link": "https://medium.com/@spfohman_90079/once-upon-a-time-cheers-to-new-beginnings-142332904741",
       "date": "October 14, 2021",
-      "likes": 0,
+      "likes": 2,
       "id": 4
+    },
+    {
+      "title": "This is a new Blog about React",
+      "link": "https://stackoverflow.com/questions/40609972/how-to-send-html-form-data-as-json-to-server",
+      "date": "December 14, 2021",
+      "likes": 3,
+      "id": 5
+    },
+    {
+      "title": "sfa",
+      "link": "https://reactjs.org/docs/hooks-state.html",
+      "date": "December 9, 2021",
+      "likes": 4,
+      "id": 6
+    },
+    {
+      "title": "Sarah's post",
+      "link": "https://stackoverflow.com/questions/40609972/how-to-send-html-form-data-as-json-to-server",
+      "date": "December 14, 2021",
+      "likes": 2,
+      "id": 7
+    },
+    {
+      "title": "a new blog",
+      "link": "https://reactjs.org/docs/hooks-state.html",
+      "date": "December 9, 2021",
+      "likes": 1,
+      "id": 8
+    },
+    {
+      "title": "robs work",
+      "link": "https://developer.mozilla.org/en-US/docs/Learn/Forms/Styling_web_forms",
+      "date": "November 27, 2021",
+      "likes": 0,
+      "id": 9
     }
   ]
 }

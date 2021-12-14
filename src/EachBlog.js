@@ -1,6 +1,21 @@
 import React from "react";
 
-const EachBlog = ({ post, updateLikes }) => {
+const EachBlog = ({ post, handleUpdateBlog }) => {
+  function updateLikes() {
+    const addLike = {
+      likes: post.likes + 1,
+    };
+
+    fetch(`http://localhost:3000/blogposts/${post.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(addLike),
+    })
+      .then((response) => response.json())
+      .then(handleUpdateBlog);
+  }
   return (
     <div className="blogCard">
       <h3>{post.title}</h3>

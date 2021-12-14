@@ -13,8 +13,7 @@ const Home = () => {
 
   const showMore = (event) => {
     event.preventDefault();
-    console.log("button click");
-    setDisplayFooter(true);
+    setDisplayFooter(!displayFooter);
   };
 
   const eachCat = cat.map((cat) => {

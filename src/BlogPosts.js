@@ -1,28 +1,28 @@
-import React, { useState } from "react";
+import React from "react";
 import EachBlog from "./EachBlog";
 
-const BlogPosts = ({ blogs }) => {
-  const [likes, setLikes] = useState(0);
+const BlogPosts = ({ blogs, handleUpdateBlog }) => {
+  // const [likes, setLikes] = useState(0);
 
-  function updateLikes() {
-    const addLike = {
-      likes: likes + 1,
-    };
-
-    fetch(`http://localhost:3001/blogposts/${blogs.id}`, {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ addLike }),
-    })
-      .then((response) => response.json())
-      .then(setLikes);
-    console.log(`clicked ${blogs.id}`);
-  }
+  // function updateLikes() {
+  //   const addLike = {
+  //     likes: likes + 1,
+  //   };
+  //   console.log(blogs.id);
+  //   fetch(`http://localhost:3000/blogposts/${blogs.id}`, {
+  //     method: "PATCH",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify({ addLike }),
+  //   })
+  //     .then((response) => response.json())
+  //     .then(setLikes);
+  //   console.log(`clicked ${blogs.id}`);
+  // }
 
   const blogPosts = blogs.map((post) => (
-    <EachBlog key={post.id} post={post} updateLikes={updateLikes} />
+    <EachBlog key={post.id} post={post} handleUpdateBlog={handleUpdateBlog} />
   ));
 
   return (

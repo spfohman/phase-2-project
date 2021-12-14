@@ -37,9 +37,19 @@ body {
 }
 .form {
   margin-bottom: 40px;
+  margin-top: 0px;
+  /* background-image: url("https://images.unsplash.com/photo-1639396637739-5ff5f7075394?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0Nnx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; */
+}
+input {
+  width: 50%;
+  height: 20px;
+  margin: 5px;
 }
 .bloglinks {
-  color: rgb(13, 13, 107);
+  color: rgb(88, 88, 236);
 }
 .navbar {
   margin: 0px;

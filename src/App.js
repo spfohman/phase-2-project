@@ -10,7 +10,7 @@ function App() {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3001/blogposts")
+    fetch("http://localhost:3000/blogposts")
       .then((response) => response.json())
       .then((data) => {
         setBlogs(data);
@@ -21,6 +21,12 @@ function App() {
     const updatedBlogs = [...blogs, newBlog];
     setBlogs(updatedBlogs);
   }
+  function handleUpdateBlog(updateLikes) {
+    const updatedLikes = blogs.map((blog) => {
+      return blog.id === updateLikes.id ? updateLikes : blog;
+    });
+    setBlogs(updatedLikes);
+  }
   return (
     <div className="App">
       <NavBar />
@@ -29,7 +35,7 @@ function App() {
         <Home />
       </Route>
       <Route path="/blogposts">
-        <BlogPosts blogs={blogs} />
+        <BlogPosts blogs={blogs} handleUpdateBlog={handleUpdateBlog} />
       </Route>
       <Route path="/blogupload">
         <BlogUpload addBlogs={addBlogs} />

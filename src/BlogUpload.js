@@ -16,7 +16,7 @@ const BlogUpload = ({ addBlogs }) => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(newBlog);
+
     const addnewBlog = {
       title: newBlog.title,
       link: newBlog.link,
@@ -24,25 +24,22 @@ const BlogUpload = ({ addBlogs }) => {
       likes: 0,
     };
     console.log(addnewBlog);
-    fetch("http://localhost:3001/blogposts/", {
+    fetch("http://localhost:3000/blogposts/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        body: JSON.stringify(addnewBlog),
       },
+      body: JSON.stringify(addnewBlog),
     })
       .then((response) => response.json())
-      .then((data) => {
-        console.log(data.title);
-        addBlogs(data.title);
+      .then(addBlogs);
 
-        setNewBlog({
-          title: "",
-          link: "",
-          date: "",
-          likes: 0,
-        });
-      });
+    setNewBlog({
+      title: "",
+      link: "",
+      date: "",
+      likes: 0,
+    });
   }
   return (
     <div>
@@ -72,7 +69,7 @@ const BlogUpload = ({ addBlogs }) => {
           onChange={handleChange}
         ></input>
         <br />
-        <input type="submit" />
+        <input className="button" type="submit" />
       </form>
     </div>
   );
