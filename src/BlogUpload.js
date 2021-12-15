@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 const BlogUpload = ({ addBlogs }) => {
+  let history = useHistory();
   const [newBlog, setNewBlog] = useState({
     title: "",
     link: "",
@@ -40,6 +42,7 @@ const BlogUpload = ({ addBlogs }) => {
       date: "",
       likes: 0,
     });
+    history.push("/blogposts");
   }
   return (
     <div>
