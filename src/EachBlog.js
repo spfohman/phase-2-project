@@ -20,7 +20,12 @@ const EachBlog = ({ post, handleUpdateBlog }) => {
     <div className="blogCard">
       <h3>{post.title}</h3>
       <h5>Posted: {post.date}</h5>
-      <a className="bloglinks" href={post.link}>
+      <a
+        className="bloglinks"
+        target="_blank"
+        rel="noreferrer"
+        href={post.link}
+      >
         {post.title}
       </a>
       <br />

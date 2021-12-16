@@ -25,7 +25,7 @@ const BlogUpload = ({ addBlogs }) => {
       date: newBlog.date,
       likes: 0,
     };
-    console.log(addnewBlog);
+
     fetch("http://localhost:3000/blogposts/", {
       method: "POST",
       headers: {

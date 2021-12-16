@@ -24,8 +24,9 @@ const Home = () => {
     <>
       <div>
         <h1>Welcome to my home page</h1>
+        <hr />
         <p>
-          My name is Sarah Pfohman, I am a current student at Flatiron School,
+          My name is Sarah Pfohman, I am a current student at Flatiron School
           based in NYC! I love cats, true crime, and learning to code!
         </p>
         {eachCat}
