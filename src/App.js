@@ -21,6 +21,7 @@ function App() {
     const updatedBlogs = [...blogs, newBlog];
     setBlogs(updatedBlogs);
   }
+
   function handleUpdateBlog(updateLikes) {
     const updatedLikes = blogs.map((blog) => {
       return blog.id === updateLikes.id ? updateLikes : blog;
@@ -31,14 +32,14 @@ function App() {
     <div className="App">
       <NavBar />
       <br />
-      <Route exact path="/">
-        <Home />
-      </Route>
       <Route path="/blogposts">
         <BlogPosts blogs={blogs} handleUpdateBlog={handleUpdateBlog} />
       </Route>
       <Route path="/blogupload">
         <BlogUpload addBlogs={addBlogs} />
+      </Route>
+      <Route exact path="/">
+        <Home />
       </Route>
     </div>
   );

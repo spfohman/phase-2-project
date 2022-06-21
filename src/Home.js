@@ -34,7 +34,7 @@ const Home = () => {
       </div>
       <footer>
         <button className="button" onClick={showMore}>
-          Show more
+          {displayFooter ? "Show Less" : "Show More"}
         </button>
         {displayFooter ? <Footer /> : null}
       </footer>

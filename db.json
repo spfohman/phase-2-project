@@ -4,36 +4,43 @@
       "title": "Using React State with Functional Components",
       "link": "https://medium.com/@spfohman_90079/using-react-state-with-functional-components-f5e22ebca411",
       "date": "November 29, 2021",
-      "likes": 7,
+      "likes": 9,
       "id": 1
     },
     {
       "title": "JavaScript Application",
       "link": "https://medium.com/@spfohman_90079/javascript-application-ba3d17c7420e",
       "date": "October 27, 2021",
-      "likes": 4,
+      "likes": 6,
       "id": 2
     },
     {
       "title": "JavaScript Array Methods for All",
       "link": "https://medium.com/@spfohman_90079/javascript-array-methods-for-all-378cde1aa849",
       "date": "October 19, 2021",
-      "likes": 3,
+      "likes": 4,
       "id": 3
     },
     {
       "title": "Once Upon a Time... Cheers to new beginnings",
       "link": "https://medium.com/@spfohman_90079/once-upon-a-time-cheers-to-new-beginnings-142332904741",
       "date": "October 14, 2021",
-      "likes": 2,
+      "likes": 3,
       "id": 4
     },
     {
-      "title": "Sarah Blog",
-      "link": "https://reactjs.org/docs/hooks-state.html",
-      "date": "December 11, 2021",
-      "likes": 0,
+      "title": "React App Build",
+      "link": "https://github.com/spfohman/phase-2-project",
+      "date": "December 16, 2021",
+      "likes": 2,
       "id": 5
+    },
+    {
+      "title": "I love Ruby!",
+      "link": "https://medium.com/@spfohman_90079/i-love-ruby-e54c1f5fb56f",
+      "date": "February 2, 2022",
+      "likes": 0,
+      "id": 6
     }
   ]
 }

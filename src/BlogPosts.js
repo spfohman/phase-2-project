@@ -1,4 +1,3 @@
-import React from "react";
 import EachBlog from "./EachBlog";
 
 const BlogPosts = ({ blogs, handleUpdateBlog }) => {
