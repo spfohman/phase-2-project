@@ -10,7 +10,7 @@ function App() {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/blogposts")
+    fetch("https://phase-2-blogpost-app.herokuapp.com/blogposts")
       .then((response) => response.json())
       .then((data) => {
         setBlogs(data);

@@ -26,7 +26,7 @@ const BlogUpload = ({ addBlogs }) => {
       likes: 0,
     };
 
-    fetch("http://localhost:3000/blogposts/", {
+    fetch("https://phase-2-blogpost-app.herokuapp.com/blogposts/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

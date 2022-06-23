@@ -6,7 +6,7 @@ const EachBlog = ({ post, handleUpdateBlog }) => {
       likes: post.likes + 1,
     };
 
-    fetch(`http://localhost:3000/blogposts/${post.id}`, {
+    fetch(`https://phase-2-blogpost-app.herokuapp.com/blogposts/${post.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
